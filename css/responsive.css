@@ -1,0 +1,46 @@
+/* BELOW PORTRAIT PHONE
+   --------------------- */
+@media (min-width: 277px) {
+    .search-option { width: 32.6% }
+}
+@media (min-width: 318px) {
+    .search-option { width: 32.7% }
+}
+@media (min-width: 375px) {
+    .search-option { width: 32.8% }
+}
+@media (min-width: 591px) {
+    .search-option { width: 33% }
+}
+
+/* UP TO LANDSCAPE PHONE
+   --------------------- */
+@media (max-width: 480px) { }
+
+/* LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+   -------------------------------------------------- */
+@media (max-width: 767px) { }
+
+/* PORTRAIT TABLET TO DEFAULT DESKTOP
+   ---------------------------------- */
+@media (min-width: 768px) and (max-width: 979px) { }
+
+/* LANDSCAPE TABLET
+   ---------------- */
+@media (min-width: 979px) and (max-width: 1024px) { }
+
+/* PORTRAIT TABLET TO LANDSCAPE TABLET
+   ---------------------------------- */
+@media (min-width: 768px) and (max-width: 1024px) { }
+
+/* TABLETS AND BELOW
+   ----------------- */
+@media (max-width: 979px) { }
+
+/* DEFAULT DESKTOP
+   --------------- */
+@media (min-width: 980px) { }
+
+/* LARGE DESKTOP & UP
+   ------------------ */
+@media (min-width: 1200px) { }
