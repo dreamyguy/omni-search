@@ -1,4 +1,6 @@
 omni-search
 ===========
 
-A search app capable of searching multiple JSON-based searches
+A simple search app that aims to perform searches through different search services/providers.
+
+PS: Work in progress! Searches are not yet available.
