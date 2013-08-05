@@ -54,4 +54,4 @@ $(function(){
     activateSearch("videos");
     activateSearch("tvguide");
     activateSearch("social");
-})
+});

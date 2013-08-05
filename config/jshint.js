@@ -1,8 +1,8 @@
 var gruntfiles = ['Gruntfile.js', 'config/*.js'];
 var jsfiles = [
     'Gruntfile.js',
-    'config/*.js'//,
-//  'js/*.js'
+    'config/*.js',
+    'js/base.js'
 ];
 
 module.exports = {
