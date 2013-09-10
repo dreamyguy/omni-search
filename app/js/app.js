@@ -1,20 +1,19 @@
-$(function(){
     // retrieve active color
     function activeColor() {
         var aC = $('.search-options .active i').css('color');
         return aC;
     }
+    // set actions
+    function isInactive(aS) {
+        $('.search-form-' + aS).addClass('active').siblings().removeClass('active');
+        $('.search-option-' + aS).addClass('active').siblings().removeClass('active');
+        $('.search-forms').css( 'border-bottom-color' , activeColor() );
+    }
     // set active search
     function activateSearch(aS) {
-        // set actions
-        function isInactive() {
-            $('.search-form-' + aS).addClass('active').siblings().removeClass('active');
-            $('.search-option-' + aS).addClass('active').siblings().removeClass('active');
-            $('.search-forms').css( 'border-bottom-color' , activeColor() );
-        }
         // load current search, depending of cookie status
         if ($.cookie('cookie_' + aS) == 'yes') {
-            isInactive();
+            isInactive(aS);
             // console.log('cookie_' + aS + ' exists');
         } else {
             // console.log('cookie_' + aS + ' doesnt exist');
@@ -22,7 +21,7 @@ $(function(){
         // change current search on click
         $('.search-option-' + aS + ' a').click(function(e) {
             if (!$(this).parent().hasClass('active')) {
-                isInactive();
+                isInactive(aS);
                 $.cookie('cookie_web', null);
                 $.cookie('cookie_news', null);
                 $.cookie('cookie_images', null);
@@ -54,4 +53,3 @@ $(function(){
     activateSearch("videos");
     activateSearch("tvguide");
     activateSearch("social");
-});
