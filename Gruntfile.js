@@ -2,8 +2,8 @@ module.exports = function(grunt) {
 
     // Import task configurations
     var jshint = require('./config/jshint'),
+        uglify = require('./config/uglify'),
         compass = require('./config/compass'),
-//      cssmin = require('./config/cssmin'),
         watch = require('./config/watch');
 
     // Main project configuration.
@@ -12,47 +12,33 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         // Static code analysis of Javascript
         jshint: jshint,
+        // Concatenate, minify and beautify/uglify Javascript
+        uglify: uglify.config,
         // Compass
         compass: compass,
-        // CSS compression
-//      cssmin: cssmin,
         // Watcher
-        watch: watch,
-        sass: {
-            dist: {
-                files: {
-                    'css/omni-search.css': 'omni-search.scss'
-                }
-            }
-        },
-        indent: {
-            options: {
-                style: 'space',
-                size: 4,
-                change: 1
-            }
-        }
+        watch: watch
     });
 
     // Load the grunt tasks
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-//  grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-indent');
+
     // Compile production files
     grunt.registerTask('dist', [
         'jshint',
-        'compass:dist'//,
-//      'cssmin'
+        'uglify:dist',
+        'compass:dist'
     ]);
 
     // Compile developer friendly environment
     grunt.registerTask('dev', [
         'jshint',
-        'compass:dev'//,
-//      'cssmin'
+        'uglify:dev',
+        'compass:dev'
     ]);
 
     // Default task(s).
