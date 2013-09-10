@@ -1,4 +1,3 @@
-$(function(){
     // retrieve active color
     function activeColor() {
         var aC = $('.search-options .active i').css('color');
@@ -54,4 +53,3 @@ $(function(){
     activateSearch("videos");
     activateSearch("tvguide");
     activateSearch("social");
-});
