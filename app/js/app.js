@@ -1,3 +1,7 @@
+    function hw() {
+        return 'Hello World';
+    }
+
     // retrieve active color
     function activeColor() {
         var aC = $('.search-options .active i').css('color');
