@@ -27,20 +27,18 @@ function all() {
 
 // Grunt configuration settings
 module.exports.config = {
+    options: {
+        banner:   '// <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd HH:mm:ss") %>\n\n',
+        mangle:   false,
+        report:   'min' // 'false', 'min' or 'gzip' Default: false
+    },
     dist: {
-        options: {
-            mangle:   false,
-            report:   'min' // 'false', 'min' or 'gzip' Default: false
-        },
         files: (all())
     },
     dev: {
         options: {
-            banner: '// <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %>\n\n',
             compress: false,
-            mangle:   false,
-            beautify: true,
-            report:   'min'
+            beautify: true
         },
         files: (all())
     }
