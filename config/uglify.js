@@ -2,7 +2,7 @@ var _ = require('underscore');
 
 var files = {
     top: {
-        'js/js_top.js': [
+        'src/js/js_top.js': [
             'app/js/jquery-1.10.2.min.js',
             'app/js/jquery.cookie.js',
             'app/js/angular.min.js',
@@ -10,7 +10,7 @@ var files = {
         ]
     },
     bottom: {
-        'js/js_bottom.js': [
+        'src/js/js_bottom.js': [
             'app/js/app.js'
         ]
     }
