@@ -7,6 +7,9 @@ module.exports = {
     ],
     options : {
         specs : 'app/js/**/*spec.js',
-        helpers: 'app/js/jquery*.js'
+        helpers: [
+            'app/js/jquery*.js',
+            'app/js/angular.min.js'
+        ]
     }
 };

@@ -14,7 +14,7 @@ module.exports = {
 
     js: {
         files: ['config/*.js', 'app/js/**/*.js'],
-        tasks: ['jshint', 'jasmine', 'uglify:dev']
+        tasks: ['jshint', 'jasmine', 'uglify:dist']
     }
 
 };
