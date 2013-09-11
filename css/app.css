@@ -2100,6 +2100,26 @@ readers do not read off random characters that represent icons
 /* --------------------------------------------
 ::::::: main styles :::::::::::::::::::::::::::
 ----------------------------------------------- */
+body {
+  background-color: #1d1e19;
+  color: #615e4b;
+  font-family: "Lucida Grande", Arial, sans-serif;
+  padding: 50px;
+}
+
+p, form {
+  margin-bottom: 15px;
+}
+
+p {
+  color: #dfcc4e;
+}
+
+.engines-list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
 .search-input {
   float: left;
   border: 0;
