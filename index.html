@@ -7,14 +7,18 @@
     <script src="js/js_top.js"></script>
 </head>
 <body>
-    <div>
-        <form class="search-form search-form-engine">
-            <input type="text" class="search-input" placeholder="Type the name of the service you'd like to search on and then what you'd like to search for">
+    <div ng-controller="doSearchController">
+        <form ng-submit="doSearch()" class="search-form search-form-engine clearfix">
+            <input ng-model="searchInput" ng-change="showOnLoad = false" type="text" class="search-input" placeholder="Search">
             <button class="btn search-btn"><i class="icon-search"></i></button>
         </form>
-        <ul ng-controller="enginesController">
-            <li ng-repeat="engine in engines">
-                {{engine.name}} - {{engine.url}}
+        <div ng-show="showOnLoad">
+            <p>Search directly at the service of your preference, from one place!</p>
+            <p>Type the name of the service you'd like to search on and then what you'd like to search for</p>
+        </div>
+        <ul class="engines-list">
+            <li ng-repeat="engine in (filteredEngines = (engines | filter:searchInput))" class="engines-list-item">
+                {{engine.name}}
             </li>
         </ul>
     </div>

@@ -48,5 +48,23 @@ var engines = [
 ];
 
 omniAppModule.controller('enginesController', function($scope) {
-	$scope.engines = engines;
+    $scope.engines = engines;
+});
+
+omniAppModule.controller('doSearchController', function($scope, $window) {
+
+    // define the engines
+    $scope.engines = engines;
+
+    // render showOnLoad on page load
+    $scope.showOnLoad = true;
+
+    // perform search on first engine listed in filtered engines upon submit
+    $scope.doSearch = function () {
+        var activeEngine = $scope.filteredEngines;
+        if (activeEngine.length > 0) {
+            $window.location.href = $scope.filteredEngines[0].url;
+        }
+    };
+
 });
