@@ -6,12 +6,18 @@
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <script src="js/js_top.js"></script>
 </head>
-<body ng-controller="engineController">
-    <form class="search-form search-form-engine">
-        <input type="text" class="search-input" placeholder="Type the name of the service you'd like to search on and then what you'd like to search for">
-        <button class="btn search-btn"><i class="icon-search"></i></button>
-    </form>
-    <p>{{engine.message}}</p>
+<body>
+    <div>
+        <form class="search-form search-form-engine">
+            <input type="text" class="search-input" placeholder="Type the name of the service you'd like to search on and then what you'd like to search for">
+            <button class="btn search-btn"><i class="icon-search"></i></button>
+        </form>
+        <ul ng-controller="enginesController">
+            <li ng-repeat="engine in engines">
+                {{engine.name}} - {{engine.url}}
+            </li>
+        </ul>
+    </div>
     <script type="text/javascript" src="js/js_bottom.js"></script>
 </body>
 </html>
