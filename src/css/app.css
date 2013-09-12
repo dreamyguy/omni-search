@@ -2112,7 +2112,7 @@ p, form {
 }
 
 p {
-  color: #dfcc4e;
+  color: #8c886d;
 }
 
 .engines-list-item {
@@ -2123,8 +2123,9 @@ p {
 .search-input {
   float: left;
   border: 0;
-  width: 75%;
+  width: 73%;
   height: 35px;
+  padding: 0 1%;
 }
 
 .search-btn {
@@ -2134,6 +2135,7 @@ p {
   border: 0;
   width: 25%;
   height: 35px;
+  background: #8c886d;
 }
 
 /* --------------------------------------------

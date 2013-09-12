@@ -33,10 +33,34 @@ omniAppModule.controller('doSearchController', function($scope, $window) {
 
     // perform search on first engine listed in filtered engines upon submit
     $scope.doSearch = function () {
-        var activeEngine = $scope.filteredEngines;
-        if (activeEngine.length > 0) {
-            $window.location.href = $scope.filteredEngines[0].url;
+
+        // get input value
+        var theInput = $scope.searchInput;
+        //- console.log(theInput);
+        var theQuery = theInput.substr(theInput.indexOf(' ') + 1);
+        //- console.log(theQuery);
+
+        // get first word of input value
+        function firstWordOnInput() {
+            var words = theInput.split(/\b/);
+            if (words.length > 0) {
+                //- console.log(words[0]);
+                return words[0];
+            }
         }
+
+        // retrieve the engines
+        var theEngines = $scope.engines;
+
+        // filter and match first word of input value to engine name
+        var matchedEngineSoGimmeUrl = theEngines.filter(function(element) {
+            // if first word on input value matches an engine name, do search
+            if (element.name == firstWordOnInput()) {
+                //- console.log(element.url);
+                $window.location.href = element.url + theQuery;
+            }
+        });
+
     };
 
 });
