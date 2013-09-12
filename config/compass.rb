@@ -2,10 +2,10 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "css"
+css_dir = "src/css"
 sass_dir = "app/sass"
-images_dir = "images"
-http_images_path = http_path + "images"
+images_dir = "src/images"
+http_images_path = http_path + "src/images"
 enviroment = "production"
 # add_import_path "components/bootstrap/lib"
 # add_import_path "components/bootstrap"

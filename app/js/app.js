@@ -1,55 +1,66 @@
-    // retrieve active color
-    function activeColor() {
-        var aC = $('.search-options .active i').css('color');
-        return aC;
-    }
-    // set actions
-    function isInactive(aS) {
-        $('.search-form-' + aS).addClass('active').siblings().removeClass('active');
-        $('.search-option-' + aS).addClass('active').siblings().removeClass('active');
-        $('.search-forms').css( 'border-bottom-color' , activeColor() );
-    }
-    // set active search
-    function activateSearch(aS) {
-        // load current search, depending of cookie status
-        if ($.cookie('cookie_' + aS) == 'yes') {
-            isInactive(aS);
-            // console.log('cookie_' + aS + ' exists');
-        } else {
-            // console.log('cookie_' + aS + ' doesnt exist');
-        }
-        // change current search on click
-        $('.search-option-' + aS + ' a').click(function(e) {
-            if (!$(this).parent().hasClass('active')) {
-                isInactive(aS);
-                $.cookie('cookie_web', null);
-                $.cookie('cookie_news', null);
-                $.cookie('cookie_images', null);
-                $.cookie('cookie_persons', null);
-                $.cookie('cookie_companies', null);
-                $.cookie('cookie_places', null);
-                $.cookie('cookie_travel', null);
-                $.cookie('cookie_food', null);
-                $.cookie('cookie_phonenrs', null);
-                $.cookie('cookie_videos', null);
-                $.cookie('cookie_tvguide', null);
-                $.cookie('cookie_social', null);
-                $.cookie('cookie_' + aS, 'yes', { expires: 30 });
-                // console.log('cookie_' + aS + ' was created');
+// jasmine's first test
+function hw() {
+    return 'Hello World';
+}
+
+// the app!
+var omniAppModule = angular.module('omniApp', []);
+
+var engines = [
+    { "name":"google", "url":"https://www.google.com/#q=" },
+    { "name":"bing", "url":"http://www.bing.com/search?q=" },
+    { "name":"twitter", "url":"https://twitter.com/search?q=" },
+    { "name":"youtube", "url":"http://www.youtube.com/results?search_query=" },
+    { "name":"vimeo", "url":"https://vimeo.com/search?q=" },
+    { "name":"flickr", "url":"http://www.flickr.com/search/?q=" },
+    { "name":"lastfm", "url":"http://www.last.fm/search?q=" },
+    { "name":"soundcloud", "url":"https://soundcloud.com/search?q=" },
+    { "name":"grooveshark", "url":"http://grooveshark.com/#!/search?q=" },
+    { "name":"stackoverflow", "url":"http://stackoverflow.com/search?q=" }
+];
+
+omniAppModule.controller('enginesController', function($scope) {
+    $scope.engines = engines;
+});
+
+omniAppModule.controller('doSearchController', function($scope, $window) {
+
+    // define the engines
+    $scope.engines = engines;
+
+    // render showOnLoad on page load
+    $scope.showOnLoad = true;
+
+    // perform search on first engine listed in filtered engines upon submit
+    $scope.doSearch = function () {
+
+        // get input value
+        var theInput = $scope.searchInput;
+        //- console.log(theInput);
+        var theQuery = theInput.substr(theInput.indexOf(' ') + 1);
+        //- console.log(theQuery);
+
+        // get first word of input value
+        function firstWordOnInput() {
+            var words = theInput.split(/\b/);
+            if (words.length > 0) {
+                //- console.log(words[0]);
+                return words[0];
             }
-            // console.log('active search is: ' + aS);
-            e.preventDefault();
+        }
+
+        // retrieve the engines
+        var theEngines = $scope.engines;
+
+        // filter and match first word of input value to engine name
+        var matchedEngineSoGimmeUrl = theEngines.filter(function(element) {
+            // if first word on input value matches an engine name, do search
+            if (element.name == firstWordOnInput()) {
+                //- console.log(element.url);
+                $window.location.href = element.url + theQuery;
+            }
         });
-    }
-    activateSearch("web");
-    activateSearch("news");
-    activateSearch("images");
-    activateSearch("persons");
-    activateSearch("companies");
-    activateSearch("places");
-    activateSearch("travel");
-    activateSearch("food");
-    activateSearch("phonenrs");
-    activateSearch("videos");
-    activateSearch("tvguide");
-    activateSearch("social");
+
+    };
+
+});

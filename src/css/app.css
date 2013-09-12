@@ -172,24 +172,24 @@ abbr, acronym {
 ----------------------------------------------- */
 @font-face {
   font-family: 'DobraMedium';
-  src: url("../fonts/dobra-medium-DobraMedium.eot");
-  src: url("../fonts/dobra-medium-DobraMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/dobra-medium-DobraMedium.woff") format("woff"), url("../fonts/dobra-medium-DobraMedium.ttf") format("truetype"), url("../fonts/dobra-medium-DobraMedium.svg#DobraMedium") format("svg");
+  src: url("../../fonts/dobra-medium-DobraMedium.eot");
+  src: url("../../fonts/dobra-medium-DobraMedium.eot?#iefix") format("embedded-opentype"), url("../../fonts/dobra-medium-DobraMedium.woff") format("woff"), url("../../fonts/dobra-medium-DobraMedium.ttf") format("truetype"), url("../../fonts/dobra-medium-DobraMedium.svg#DobraMedium") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DobraSlabMedium';
-  src: url("../fonts/dobraslab-medium-DobraSlab.eot");
-  src: url("../fonts/dobraslab-medium-DobraSlab.eot?#iefix") format("embedded-opentype"), url("../fonts/dobraslab-medium-DobraSlab.woff") format("woff"), url("../fonts/dobraslab-medium-DobraSlab.ttf") format("truetype"), url("../fonts/dobraslab-medium-DobraSlab.svg#DobraSlabMedium") format("svg");
+  src: url("../../fonts/dobraslab-medium-DobraSlab.eot");
+  src: url("../../fonts/dobraslab-medium-DobraSlab.eot?#iefix") format("embedded-opentype"), url("../../fonts/dobraslab-medium-DobraSlab.woff") format("woff"), url("../../fonts/dobraslab-medium-DobraSlab.ttf") format("truetype"), url("../../fonts/dobraslab-medium-DobraSlab.svg#DobraSlabMedium") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DobraBook';
-  src: url("../fonts/dobra-book-DobraBook.eot");
-  src: url("../fonts/dobra-book-DobraBook.eot?#iefix") format("embedded-opentype"), url("../fonts/dobra-book-DobraBook.woff") format("woff"), url("../fonts/dobra-book-DobraBook.ttf") format("truetype"), url("../fonts/dobra-book-DobraBook.svg#DobraBook") format("svg");
+  src: url("../../fonts/dobra-book-DobraBook.eot");
+  src: url("../../fonts/dobra-book-DobraBook.eot?#iefix") format("embedded-opentype"), url("../../fonts/dobra-book-DobraBook.woff") format("woff"), url("../../fonts/dobra-book-DobraBook.ttf") format("truetype"), url("../../fonts/dobra-book-DobraBook.svg#DobraBook") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -244,8 +244,8 @@ abbr, acronym {
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=3.2.1");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=3.2.1") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=3.2.1") format("truetype"), url("../fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg");
+  src: url("../../fonts/fontawesome-webfont.eot?v=3.2.1");
+  src: url("../../fonts/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"), url("../../fonts/fontawesome-webfont.woff?v=3.2.1") format("woff"), url("../../fonts/fontawesome-webfont.ttf?v=3.2.1") format("truetype"), url("../../fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2100,24 +2100,33 @@ readers do not read off random characters that represent icons
 /* --------------------------------------------
 ::::::: main styles :::::::::::::::::::::::::::
 ----------------------------------------------- */
-.search-forms {
-  margin: 0 0 3px;
-  border-bottom: 10px solid #81a0d3;
+body {
+  background-color: #1d1e19;
+  color: #615e4b;
+  font-family: "Lucida Grande", Arial, sans-serif;
+  padding: 50px;
 }
 
-.search-form {
-  display: none;
+p {
+  margin-bottom: 15px;
+  color: #8c886d;
 }
 
-.search-form.active {
-  display: block;
+form {
+  margin-bottom: 20px;
+}
+
+.engines-list-item {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .search-input {
   float: left;
   border: 0;
-  width: 75%;
+  width: 73%;
   height: 35px;
+  padding: 0 1%;
 }
 
 .search-btn {
@@ -2127,108 +2136,7 @@ readers do not read off random characters that represent icons
   border: 0;
   width: 25%;
   height: 35px;
-}
-
-.search-option {
-  margin: 0 0 3px;
-  vertical-align: middle;
-  border: 0;
-  width: 33.3%;
-  list-style: none;
-  display: inline-block;
-  text-align: center;
-  background-color: #eee;
-}
-
-.search-option {
-  text-shadow: 1px 1px 0 white;
-}
-
-.search-option,
-.search-option a {
-  color: #333;
-}
-
-.search-option a {
-  display: block;
-  padding: 13% 0;
-  text-decoration: none;
-}
-
-.search-option i {
-  font-size: 24px;
-}
-
-.search-option.active {
-  background-color: #ddd;
-  box-shadow: 0 0 30px #cccccc inset;
-}
-
-.search-option-web i,
-.search-form-web i {
-  color: #81A0D3;
-}
-
-.search-option-news i,
-.search-form-news i {
-  color: #79C7F0;
-}
-
-.search-option-images i,
-.search-form-images i {
-  color: #B97FB1;
-}
-
-.search-option-persons i,
-.search-form-persons i {
-  color: #84C28A;
-}
-
-.search-option-companies i,
-.search-form-companies i {
-  color: #F6C07A;
-}
-
-.search-option-places i,
-.search-form-places i {
-  color: #E98B93;
-}
-
-.search-option-travel i,
-.search-form-travel i {
-  color: #EB8769;
-}
-
-.search-option-food i,
-.search-form-food i {
-  color: #8472B1;
-}
-
-.search-option-phonenrs i,
-.search-form-phonenrs i {
-  color: #CADD8A;
-}
-
-.search-option-videos i,
-.search-form-videos i {
-  color: #C44043;
-}
-
-.search-option-tvguide i,
-.search-form-tvguide i {
-  color: #AC8D74;
-}
-
-.search-option-social i,
-.search-form-social i {
-  color: #61B0B3;
-}
-
-.colors-preview li {
-  display: inline-block;
-  width: 6%;
-  padding: 4px 0;
-  text-align: center;
+  background: #8c886d;
 }
 
 /* --------------------------------------------

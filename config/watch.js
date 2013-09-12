@@ -13,8 +13,8 @@ module.exports = {
     },
 
     js: {
-        files: 'app/js/**/*.js',
-        tasks: ['jshint', 'uglify:dev']
+        files: ['config/*.js', 'app/js/**/*.js'],
+        tasks: ['jshint', 'jasmine', 'uglify:dist']
     }
 
 };
