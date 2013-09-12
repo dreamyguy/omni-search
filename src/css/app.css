@@ -2107,12 +2107,13 @@ body {
   padding: 50px;
 }
 
-p, form {
+p {
   margin-bottom: 15px;
+  color: #8c886d;
 }
 
-p {
-  color: #8c886d;
+form {
+  margin-bottom: 20px;
 }
 
 .engines-list-item {

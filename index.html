@@ -13,7 +13,7 @@
             <button class="btn search-btn"><i class="icon-search"></i></button>
         </form>
         <div ng-show="showOnLoad">
-            <p>Type the name of the service you'd like to search on and then what you'd like to search for</p>
+            <p>Type the name of the service you'd like to search on and then what you'd like to search for...</p>
         </div>
         <ul class="engines-list">
             <li ng-repeat="engine in (filteredEngines = (engines | filter:searchInput))" class="engines-list-item">
