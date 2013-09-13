@@ -12,16 +12,37 @@
 
 ## Currently Available Engines
 
-* google
+* amazon
+* bbc
 * bing
-* twitter
-* youtube
-* vimeo
+* blip
+* cnn
+* deviantart
+* digg
+* duckduckgo
+* ebay
+* engadget
 * flickr
-* lastfm
-* soundcloud
+* google
 * grooveshark
+* lastfm
+* linkedin
+* macrumors
+* mashable
+* nationalgeographic
+* nytimes
+* reddit
+* reuters
+* songkick
+* soundcloud
+* squidoo
 * stackoverflow
+* startsiden
+* stay
+* twitter
+* vimeo
+* wikipedia
+* youtube
 
 ## Further Notes
 
