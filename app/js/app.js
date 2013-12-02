@@ -27,6 +27,11 @@ omniAppModule.controller('doSearchController', function($scope, $window) {
         var theQuery = theInput.substr(theInput.indexOf(' ') + 1);
         //- console.log(theQuery);
 
+        // default search engine
+        var defaultEngine = 'startsiden';
+        // default url
+        var defaultUrl = 'http://www.startsiden.no/sok/?q=';
+
         // get first word of input value
         function firstWordOnInput() {
             var words = theInput.split(/\b/);
@@ -45,6 +50,8 @@ omniAppModule.controller('doSearchController', function($scope, $window) {
             if (element.name == firstWordOnInput()) {
                 //- console.log(element.url);
                 $window.location.href = element.url + theQuery;
+            } else {
+                $window.location.href = defaultUrl + theInput;
             }
         });
 
