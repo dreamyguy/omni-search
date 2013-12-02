@@ -1,23 +1,25 @@
+@import "variables";
+
 @font-face {
   font-family: 'DobraMedium';
-  src: url("../../fonts/dobra-medium-DobraMedium.eot");
-  src: url("../../fonts/dobra-medium-DobraMedium.eot?#iefix") format("embedded-opentype"), url("../../fonts/dobra-medium-DobraMedium.woff") format("woff"), url("../../fonts/dobra-medium-DobraMedium.ttf") format("truetype"), url("../../fonts/dobra-medium-DobraMedium.svg#DobraMedium") format("svg");
+  src: url('#{$fontsPath}/dobra-medium-DobraMedium.eot');
+  src: url('#{$fontsPath}/dobra-medium-DobraMedium.eot?#iefix') format("embedded-opentype"), url('#{$fontsPath}/dobra-medium-DobraMedium.woff') format("woff"), url('#{$fontsPath}/dobra-medium-DobraMedium.ttf') format("truetype"), url('#{$fontsPath}/dobra-medium-DobraMedium.svg#DobraMedium') format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DobraSlabMedium';
-  src: url("../../fonts/dobraslab-medium-DobraSlab.eot");
-  src: url("../../fonts/dobraslab-medium-DobraSlab.eot?#iefix") format("embedded-opentype"), url("../../fonts/dobraslab-medium-DobraSlab.woff") format("woff"), url("../../fonts/dobraslab-medium-DobraSlab.ttf") format("truetype"), url("../../fonts/dobraslab-medium-DobraSlab.svg#DobraSlabMedium") format("svg");
+  src: url('#{$fontsPath}/dobraslab-medium-DobraSlab.eot');
+  src: url('#{$fontsPath}/dobraslab-medium-DobraSlab.eot?#iefix') format("embedded-opentype"), url('#{$fontsPath}/dobraslab-medium-DobraSlab.woff') format("woff"), url('#{$fontsPath}/dobraslab-medium-DobraSlab.ttf') format("truetype"), url('#{$fontsPath}/dobraslab-medium-DobraSlab.svg#DobraSlabMedium') format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DobraBook';
-  src: url("../../fonts/dobra-book-DobraBook.eot");
-  src: url("../../fonts/dobra-book-DobraBook.eot?#iefix") format("embedded-opentype"), url("../../fonts/dobra-book-DobraBook.woff") format("woff"), url("../../fonts/dobra-book-DobraBook.ttf") format("truetype"), url("../../fonts/dobra-book-DobraBook.svg#DobraBook") format("svg");
+  src: url('#{$fontsPath}/dobra-book-DobraBook.eot');
+  src: url('#{$fontsPath}/dobra-book-DobraBook.eot?#iefix') format("embedded-opentype"), url('#{$fontsPath}/dobra-book-DobraBook.woff') format("woff"), url('#{$fontsPath}/dobra-book-DobraBook.ttf') format("truetype"), url('#{$fontsPath}/dobra-book-DobraBook.svg#DobraBook') format("svg");
   font-weight: normal;
   font-style: normal;
 }

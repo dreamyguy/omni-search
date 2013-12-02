@@ -6,7 +6,8 @@ var files = {
             'app/js/jquery-1.10.2.min.js',
             'app/js/jquery.cookie.js',
             'app/js/angular.min.js',
-            'app/js/angular-resource.min.js'
+            'app/js/angular-resource.min.js',
+            'app/js/webfont-loader.js'
         ]
     },
     bottom: {
