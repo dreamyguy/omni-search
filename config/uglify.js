@@ -32,7 +32,7 @@ function all() {
 // Grunt configuration settings
 module.exports.config = {
     options: {
-        banner:   '// <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd HH:mm:ss") %>\n\n',
+    //  banner:   '// <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd HH:mm:ss") %>\n\n',
         mangle:   false,
         report:   'min' // 'false', 'min' or 'gzip' Default: false
     },
